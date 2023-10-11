@@ -88,7 +88,7 @@ func main() {
 	}
 
 	if _, err := GetUserInput(dnsServers); err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 
 	close(domains)
