@@ -40,7 +40,10 @@ func queryNSEC(domain string, server string, visited *sync.Map) {
 
 	r, _, err := c.Exchange(m, server)
 	if err != nil {
-		fmt.Println(err)
+		if verbose {
+			fmt.Println(err)
+		}
+
 		return
 	}
 
